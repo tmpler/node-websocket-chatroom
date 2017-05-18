@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Chat app using node and websockets",
   "dependencies": {
-    "mime": "^1.3.6",
-    "socket.io": "^2.0.1"
+    "socket.io": "~0.9.6",
+    "mime": "~1.2.7"
   }
 }
