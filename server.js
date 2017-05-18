@@ -3,6 +3,7 @@ var fs = require('fs');
 var path = require('path');
 var mime = require('mime');
 var cache = {};
+var chatServer = require('./lib/chat_server');
 
 var send404 = function(response){
   response.writeHead(404, {'Content-Type':'text/plain'});
@@ -51,3 +52,5 @@ var server = http.createServer(function(request,response){
 server.listen(1337, function(){
   console.log("Server listening on the 1337 port!");
 });
+
+chatServer.listen(server);
