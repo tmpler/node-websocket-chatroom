@@ -46,6 +46,7 @@ $(document).ready(function(){
     $('#messages').append(newElement);
   });
   socket.on('rooms', function(rooms){
+    console.log("inrooms");
     $('#room-list').empty();
     for(var room in rooms){
       room = room.substring(1, room.length);
@@ -59,7 +60,7 @@ $(document).ready(function(){
     });
   });
   setInterval(function(){
-    socket.emit('room');
+    socket.emit('rooms');
   }, 1000);
   $('#send-message').focus();
   $('#send-form').submit(function(){
